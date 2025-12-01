@@ -1,0 +1,21 @@
+#!/bin/bash
+TEST=false
+while getopts "d:t" opt; do
+  case ${opt} in 
+    d )
+	DAY=$OPTARG
+	;;
+    t)
+        TEST=true
+        ;;
+   esac
+done
+
+IN="./input/day${DAY}.txt"
+if $TEST; then
+    IN="./input/day${DAY}_test.txt"
+fi
+
+SOL="./days/day${DAY}.py"
+
+cat "$IN" | python3 "$SOL"
