@@ -18,8 +18,6 @@ def check_adjacent(posi_num, line_num, dep):
                 rolls += 1
     return rolls
 
-
-
 def part1(dep):
     possible = 0
     for line_num, line in enumerate(dep):
@@ -30,7 +28,6 @@ def part1(dep):
             if adjacent < 4:
                 possible += 1
     print(possible)
-
 
 def part2(dep):
     removed = 0
@@ -44,11 +41,8 @@ def part2(dep):
                 if adjacent < 4:
                     possible += 1
                     dep[line_num][posi_num] = 'x'
-                    # print(line_num, posi_num, adjacent)
-            #print(line)
         if possible == 0:
             break
-        #print(possible)
         removed += possible
     print(removed)
 

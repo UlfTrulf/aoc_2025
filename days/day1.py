@@ -1,12 +1,10 @@
 import sys
-import copy
 
 def convert(s: str, n: int) -> int:
     if s == "L":
         return -n
     else:
         return n
-
 
 def part1(turns):
     dial = 50

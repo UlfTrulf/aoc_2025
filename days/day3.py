@@ -12,7 +12,6 @@ def do_stuff(batteries, turn_ons):
         last_max = cur_max + 1 + last_max
     return number
 
-
 def part1(bench):
     sum = 0
     on = 2
