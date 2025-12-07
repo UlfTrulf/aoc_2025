@@ -1,8 +1,5 @@
 import sys
 
-from gi.overrides.keysyms import value
-
-
 def get_start(line):
     for c, char in enumerate(line):
         if char == 'S':
